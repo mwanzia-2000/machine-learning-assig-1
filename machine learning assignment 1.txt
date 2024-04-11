@@ -8,24 +8,24 @@ housing_data = pd.read_csv('real estate_data.csv')
 
 # Display summary statistics
 print("Summary Statistics:")
-print(housing_data.describe())
+print(real estate_data.describe())
 
 # Data Visualization
 # Histograms of numeric features
 numeric_features = ['Rooms', 'Bedrooms', 'Bathrooms', 'Landsize', 'BuildingArea', 'YearBuilt', 'Lattitude', 'Longtitude', 'Price']
-housing_data[numeric_features].hist(bins=20, figsize=(15, 10))
+real estate_data[numeric_features].hist(bins=20, figsize=(15, 10))
 plt.suptitle("Histograms of Numeric Features")
 plt.show()
 
 # Box plots to identify outliers
 plt.figure(figsize=(15, 10))
-sns.boxplot(data=housing_data[numeric_features])
+sns.boxplot(data=real estate_data[numeric_features])
 plt.title("Box plots of Numeric Features")
 plt.xticks(rotation=45)
 plt.show()
 
 # Pairplot to visualize relationships between numeric features
-sns.pairplot(housing_data[numeric_features])
+sns.pairplot(real estate_data[numeric_features])
 plt.suptitle("Pairplot of Numeric Features")
 plt.show()
 
